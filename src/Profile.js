@@ -7,8 +7,11 @@ import github from "./assets/github.svg"
 import zuri from "./assets/Zuri.svg"
 import ingress from "./assets/ingressive.svg"
 import {GiHamburgerMenu} from 'react-icons/gi'
+import {useNavigate} from 'react-router-dom'
 
 const Profile = () => {
+    let navigate = useNavigate()
+
   return (
     <div className="App">
       <main>
@@ -67,7 +70,7 @@ const Profile = () => {
                   </a>
                 </div>
                 <div className="link">
-                  <a href="/contact" target="_blank" rel='noreferrer'>
+                  <a  target="_blank" href={() => {navigate("/contact")}} rel='noreferrer'>
                     <button className="link__btn" id="contact">Contact Me</button>
                   </a>
                 </div>
